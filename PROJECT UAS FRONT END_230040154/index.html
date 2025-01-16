@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAS WEB_230040154</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="landing-page">
+        <h1>Selamat Datang di Yusshmi Keyboard</h1>
+        <p>Tempat terbaik untuk belanja keyboard mekanik dan berdiskusi bersama komunitas.</p>
+        <button class="btn enter-btn">Masuk</button>
+    </div>
+
+    <section id="shop" class="shop-section" style="display: none; padding: 20px;">
+        <h2>Toko</h2>
+        <div class="products">
+            <div class="product-item">
+                <img src="keyboard1.jpeg" alt="Keyboard" class="keyboard">
+                <div class="product" data-name="Keyboard A" data-price="650000">
+                    <h3>Keyboard A</h3>
+                    <p>Harga: Rp. 650.000</p>
+                    <button class="btn add-to-cart">Tambahkan ke Keranjang</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="keyboard2.jpeg" alt="Keyboard" class="keyboard">
+                <div class="product" data-name="Keyboard B" data-price="750000">
+                    <h3>Keyboard B</h3>
+                    <p>Harga: Rp. 750.000</p>
+                    <button class="btn add-to-cart">Tambahkan ke Keranjang</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="keyboard 3.jpeg" alt="Keyboard" class="keyboard">
+                <div class="product" data-name="Keyboard C" data-price="850000">
+                    <h3>Keyboard C</h3>
+                    <p>Harga: Rp. 850.000</p>
+                    <button class="btn add-to-cart">Tambahkan ke Keranjang</button>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section id="discussion" class="discussion-section" style="padding: 20px; background: #f9f9f9; text-align: center;">
+            <h2>Berdiskusi dengan Kami</h2>
+            <p>Kami senang mendengar pendapat atau pertanyaan Anda. Silakan isi formulir berikut:</p>
+            <form id="discussionForm" style="max-width: 600px; margin: 0 auto; text-align: left;">
+                <label for="name" style="display: block; margin-bottom: 5px;">Nama:</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;">
+        
+                <label for="email" style="display: block; margin-bottom: 5px;">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;">
+        
+                <label for="message" style="display: block; margin-bottom: 5px;">Pesan:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tulis pesan atau pertanyaan Anda di sini" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; margin-bottom: 15px;"></textarea>
+        
+                <button type="submit" class="btn" style="display: block; width: 100%; padding: 10px; background-color: #4CAF50; color: #fff; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer;">Kirim</button>
+            </form>
+        </section>
+        
+    </section>
+    <section id="contact-us" class="contact-section" style="padding: 20px; background: #fff; color: #000; text-align: center;">
+        <h2>Hubungi Kami</h2>
+        <p>Jika Anda memiliki pertanyaan atau membutuhkan bantuan, jangan ragu untuk menghubungi kami melalui:</p>
+        <ul style="list-style: none; padding: 0;">
+            <li>Email: <a href="mailto:contact@yusshmi.com">contact@yusshmi.com</a></li>
+            <li>Telepon: <a href="tel:+628123456789">+62 812 3456 789</a></li>
+            <li>Alamat: Jalan Panji Dalung No.24</li>
+        </ul>
+        <p>Atau kunjungi media sosial kami untuk informasi lebih lanjut:</p>
+        <div>
+            <a href="https://facebook.com/yusshmi" target="_blank">Facebook</a> |
+            <a href="https://instagram.com/yusshmi" target="_blank">Instagram</a> |
+            <a href="https://twitter.com/yusshmi" target="_blank">Twitter</a>
+        </div>
+    </section>
+
+    <div id="cartModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>Keranjang Belanja</h2>
+            <div id="cartItems"></div>
+            <p id="totalPrice">Total: Rp. 0</p>
+            <div>
+                <h3>Metode Pembayaran</h3>
+                <select id="paymentMethod">
+                    <option value="bank">Transfer Bank</option>
+                    <option value="cod">Bayar di Tempat</option>
+                </select>
+            </div>
+            <button class="btn checkout-btn">Bayar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
